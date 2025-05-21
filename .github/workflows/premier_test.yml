@@ -2,7 +2,16 @@ name: Premier WorkFlow
 
 # Déclencheur du worflow (peut y en avoir plusieurs)
 on:
+  # Déclenche le WF manuellement
   workflow_dispatch: 
+
+  # Déclenche le WF quand il y a une action push sur la main
+  push: 
+    branches: ["main"]
+
+  # Déclenche le WF quand il y a une action pull-request sur la main
+  pull_request:
+    branches: ["main"]
 # Lister et définir les différents travaux
 jobs: 
   nom_job1:
@@ -15,4 +24,7 @@ jobs:
         run: echo "Hello GitHub Action !"
       
       - name: Seconde opération
+        run: echoo "Test avec une mauvaise instruction"
+      
+      - name: Troisième opération
         run: echo "Bye GitHub Action !"
