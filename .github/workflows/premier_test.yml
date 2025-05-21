@@ -1,0 +1,18 @@
+name: Premier WorkFlow
+
+# Déclencheur du worflow (peut y en avoir plusieurs)
+on:
+  workflow_dispatch: 
+# Lister et définir les différents travaux
+jobs: 
+  nom_job1:
+    # L'OS de du Runner
+    runs-on: ubuntu-latest
+
+    # Liste des étapes à exécuter par le job 1
+    steps: 
+      - name: Première opération
+        run: echo "Hello GitHub Action !"
+      
+      - name: Seconde opération
+        run: echo "Bye GitHub Action !"
