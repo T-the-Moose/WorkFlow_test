@@ -7,11 +7,11 @@ on:
 
   # Déclenche le WF quand il y a une action push sur la main
   push: 
-    branches: ["main"]
+    branches: ["master"]
 
   # Déclenche le WF quand il y a une action pull-request sur la main
   pull_request:
-    branches: ["main"]
+    branches: ["master"]
 # Lister et définir les différents travaux
 jobs: 
   nom_job1:
